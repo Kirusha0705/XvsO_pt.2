@@ -8,9 +8,9 @@ def check_win(board):
     win_cords = board[:3], board[3:6], board[6:], board[::3], board[1::3], board[2::3], board[::4], board[2:7:2]
     for i in win_cords:
         if all(map(lambda x: x == "X", i)):
-            return f"Победил {i[0]}"
+            return f"Победил '{i[0]}' "
         elif all(map(lambda x: x == "O", i)):
-            return f"Победил {i[0]}"
+            return f"Победил '{i[0]}' "
     else:
         return False
 
